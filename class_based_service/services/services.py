@@ -29,5 +29,4 @@ class ServiceClass(BaseService):
     def _prepare_data(self, **kwargs):
         for key, value in kwargs.items():
             if key in self.fields.keys():
-                # self.prepared_data[key] = value
                 self.prepared_data[key] = self.fields[key](value)
